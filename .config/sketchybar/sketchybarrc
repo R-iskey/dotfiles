@@ -1,0 +1,73 @@
+#!/bin/bash
+
+DIR="$HOME/.config/sketchybar/"
+ITEM_DIR="$DIR/items"
+PLUGIN_DIR="$DIR/plugins"
+
+FONT="FiraMono Nerd Font"
+ICON_FONT="sf-symbols"
+
+PADDING=5
+
+# aerospace setting
+AEROSPACE_FOCUSED_MONITOR_NO=$(aerospace list-workspaces --focused)
+AEROSPACE_LIST_OF_WINDOWS_IN_FOCUSED_MONITOR=$(aerospace list-windows --workspace $AEROSPACE_FOCUSED_MONITOR_NO | awk -F'|' '{gsub(/^ *| *$/, "", $2); print $2}')
+
+source "$DIR/colors.sh"
+source "$DIR/icons.sh"
+
+BAR_PROPS=(
+  height=40
+  shadow=off
+  position=top
+  sticky=on
+  padding_right=10
+  padding_left=$PADDING
+  blur_radius=100
+  notch_width=0
+  margin=0
+  y_offset=0
+  corner_radius=0
+  topmost=window
+
+  border_width=1
+  border_color=$BG_SEC_COLR
+  color=$BG_PRI_COLR
+)
+
+DEF_PROPS=(
+  updates=when_shown
+  icon.font="$ICON_FONT:Bold:16.0"
+  icon.color=$WHITE
+  icon.padding_left=10
+  icon.padding_right=2
+  label.font="$FONT:SemiBold:12.0"
+  label.color=$WHITE
+  label.padding_left=$PADDING
+  label.padding_right=$PADDING
+  background.color=$TRANSPARENT
+  background.padding_right=$PADDING
+  background.padding_left=$PADDING
+  background.height=25
+  background.corner_radius=10
+)
+
+sketchybar --bar "${BAR_PROPS[@]}"
+sketchybar --default "${DEF_PROPS[@]}"
+
+# -- LEFT Side Items --
+source "$ITEM_DIR/apple.sh"
+source "$ITEM_DIR/aerospace.sh"
+source "$ITEM_DIR/front_app.sh"
+# source "$ITEM_DIR/focus.sh"
+
+# -- RIGHT Side Items --
+#source "$ITEM_DIR/profile.sh"
+source "$ITEM_DIR/datetime.sh"
+source "$ITEM_DIR/weather.sh"
+source "$ITEM_DIR/metrics.sh"
+source "$ITEM_DIR/media.sh"
+
+sketchybar --hotload on
+
+sketchybar --update
