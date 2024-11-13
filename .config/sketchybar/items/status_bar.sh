@@ -5,7 +5,7 @@ VOLUME=(
   icon.color=$WHITE
   icon.padding_left=3
   icon.padding_right=3
-  icon.y_offset=1
+  # icon.y_offset=1
   icon.font="$ICON_FONT:Regular:13.0"
   label.drawing=off
   background.color=$TRANSPARENT
@@ -18,7 +18,7 @@ BATTERY=(
   update_freq=120
   icon.padding_left=0
   icon.padding_right=0
-  icon.y_offset=1
+  # icon.y_offset=1
   icon.font="$ICON_FONT:Regular:15.0"
   label.drawing=off
   background.color=$TRANSPARENT
@@ -32,7 +32,7 @@ WIFI=(
   icon.color=$WHITE
   icon.padding_left=0
   icon.padding_right=5
-  icon.y_offset=1
+  # icon.y_offset=1
   label.drawing=off
   background.color=$TRANSPARENT
   script="$PLUGIN_DIR/wifi.sh"
@@ -40,12 +40,12 @@ WIFI=(
 )
 
 STATUS_BAR=(
-  # background.color=$OVERLAY
+  background.color=$BG_PRI_COLR_BLUR_OVERLAY
   background.corner_radius=5
   background.height=25
   background.padding_left=5
   background.padding_right=5
-  background.border_color=$DARK_WHITE
+  background.border_color=$BG_PRI_COLR_BLUR_BORDER
   background.border_width=1
 )
 
@@ -58,7 +58,7 @@ sketchybar --add item spacer_status right \
            --set volume "${VOLUME[@]}" \
            --set wifi "${WIFI[@]}" \
            --set spacer_status background.drawing=off \
-           width=5 \
+           width=10 \
            --subscribe volume volume_change \
            --subscribe battery system_woke power_source_change \
            

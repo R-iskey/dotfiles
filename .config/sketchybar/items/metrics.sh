@@ -101,10 +101,10 @@ sketchybar --add item spacer_metrics right \
 
 # Create the bracket with metrics items
 sketchybar --add bracket metrics memory cpu disk network_up network_down \
-    --set metrics background.color=$TRANSPARENT \
+    --set metrics background.color=$BG_PRI_COLR_BLUR_OVERLAY \
     background.corner_radius=5 \
     background.height=25 \
     background.padding_left=5 \
     background.padding_right=5 \
-    # background.border_width=1 
-    # background.border_color=$DARK_WHITE
+    background.border_width=1 \
+    background.border_color=$BG_PRI_COLR_BLUR_BORDER

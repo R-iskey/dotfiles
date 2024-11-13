@@ -148,4 +148,4 @@ humidity=$(echo "$weather" | jq -r ".current.humidity")
 wind_speed=$(echo "$weather" | jq -r ".current.wind_kph")
 wind_direction=$(echo "$weather" | jq -r ".current.wind_dir")
 # 
-sketchybar --set $NAME drawing=on icon="${temp%%.*}°C" label=$icon
+sketchybar --set $NAME drawing=on icon="$icon" label="${temp%%.*}°C"
