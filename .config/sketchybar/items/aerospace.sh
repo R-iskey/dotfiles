@@ -7,7 +7,7 @@ source "$HOME/.config/sketchybar/icons.sh"
 source "$HOME/.config/sketchybar/helpers.sh"
 
 # M = Media/Messsanger, W = Work
-declare -a MAX_WORKSPACES=("1" "2" "3" "4" "5" "M" "W")
+declare -a MAX_WORKSPACES=("1" "2" "3" "4" "5" "6" "7")
 # declare -a WORKSPACE_COLORS=(
 #   ["1"]="$MAUVE" 
 #   ["2"]="$SKY" 
@@ -47,12 +47,12 @@ for m in $(aerospace list-monitors | awk '{print $1}'); do
         icon.font.size=12
         icon.padding_left=1
         icon.padding_right=5
-        icon.highlight_color=$GREEN 
+        icon.highlight_color=$BLUE 
         display=1
         label.padding_right=5
         label.padding_left=1
         label.font="sketchybar-app-font:Regular:11.0" 
-        label.highlight_color=$GREEN
+        label.highlight_color=$BLUE
         label.y_offset=0
         click_script="aerospace workspace $sid" 
         script="$PLUGIN_DIR/aerospace.sh $sid"

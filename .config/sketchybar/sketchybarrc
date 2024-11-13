@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="$HOME/.config/sketchybar/"
+DIR="$HOME/.config/sketchybar"
 ITEM_DIR="$DIR/items"
 PLUGIN_DIR="$DIR/plugins"
 
@@ -30,9 +30,9 @@ BAR_PROPS=(
   corner_radius=0
   topmost=window
 
-  border_width=1
+  border_width=0
   border_color=$BG_SEC_COLR
-  color=$BG_PRI_COLR
+  color=$BG_PRI_COLR_BLUR
 )
 
 DEF_PROPS=(
@@ -65,6 +65,8 @@ source "$ITEM_DIR/front_app.sh"
 #source "$ITEM_DIR/profile.sh"
 source "$ITEM_DIR/datetime.sh"
 source "$ITEM_DIR/weather.sh"
+
+source "$ITEM_DIR/status_bar.sh"
 source "$ITEM_DIR/metrics.sh"
 source "$ITEM_DIR/media.sh"
 

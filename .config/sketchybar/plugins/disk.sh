@@ -8,7 +8,7 @@ used_percentage=$((100 - available_percentage))
 
 if [ "$used_percentage" -gt 90 ]; then
   COLOR=$NORD_DANGER   
-elif [ "$used_percentage" -gt 70 ]; then
+elif [ "$used_percentage" -gt 80 ]; then
   COLOR=$NORD_WARNING 
 else
   COLOR=$WHITE 

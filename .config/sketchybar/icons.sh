@@ -32,5 +32,5 @@ export WORKSPACE_2=󰎧
 export WORKSPACE_3=󰎪
 export WORKSPACE_4=󰎭
 export WORKSPACE_5=󰎱
-export WORKSPACE_M=󰰐
-export WORKSPACE_W=󰰮
+export WORKSPACE_6=󰰐
+export WORKSPACE_7=󰰮

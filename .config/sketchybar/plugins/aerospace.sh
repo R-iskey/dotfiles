@@ -8,7 +8,6 @@ if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
     sketchybar --set "$NAME" icon.highlight=on \
         label.highlight=on \
         display=1
-
     # sketchybar --set spacer_$1 background.color=$NORD_BG1
 else
     sketchybar --set "$NAME" icon.highlight=off \

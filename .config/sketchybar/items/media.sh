@@ -5,21 +5,21 @@ media=(
     updates=on
     drawing=off
     label="No Media Playing"
-    background.color=$TRANSPARENT
-    background.border_width=1
-    background.border_color=$NORD_BORDER
+    background.color=$OVERLAY
+    # background.border_width=1
+    background.border_color=$BLUE
     background.corner_radius=5
     background.height=25
     background.padding_left=5
     background.padding_right=5
     label.font.size=12
     icon.font="$ICON_FONT:Regular:12.0"
-    padding_right=80
+    padding_right=90
     width=150          # Add fixed width
     label.width=80    # Add fixed label width
     icon.width=20      # Add fixed icon width
-    label.color=$LAVENDER
-    icon.color=$LAVENDER
+    label.color=$WHITE
+    icon.color=$WHITE
     align=left         # Ensure left alignment
 )
 
