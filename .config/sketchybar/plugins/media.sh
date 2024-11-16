@@ -66,12 +66,12 @@ determine_icon() {
 
 # Main function
 main() {
-    local FIXED_WIDTH=25   # Adjust the width as needed
+    local FIXED_WIDTH=20   # Adjust the width as needed
     
     sleep 1
 
     # Ensure only one instance of the script is running
-    kill_dupes "/sketchybar/plugins/media.sh"
+    # kill_dupes "/sketchybar/plugins/media.sh"
 
     local media_info
     media_info=$(get_media_info)
@@ -82,6 +82,8 @@ main() {
 
     local state
     state=$(echo "$media_info" | jq -r '.state')
+    
+    echo $state
 
     if [ "$state" != "playing" ] && [ "$state" != "paused" ]; then
         exit 0

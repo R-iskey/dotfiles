@@ -9,7 +9,7 @@ WEATHER=(
   label.y_offset=-1
   # icon.width=0
   label.color=$WHITE
-  label.padding_left=0
+  label.padding_left=2
   label.padding_right=5
   label.font.size=12
   # label.y_offset=-2
@@ -31,5 +31,5 @@ sketchybar --add item weather_spacer right \
            --set weather "${WEATHER[@]}" \
            --set weather_spacer background.drawing=off width=20
 
-sketchybar --add bracket weather_bar weather right \
-      --set weather_bar "${WEATHER_BAR[@]}" 
+sketchybar --add bracket weather_bar weather \
+           --set weather_bar "${WEATHER_BAR[@]}"

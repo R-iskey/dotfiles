@@ -68,7 +68,7 @@ source "$ITEM_DIR/weather.sh"
 
 source "$ITEM_DIR/status_bar.sh"
 source "$ITEM_DIR/metrics.sh"
-source "$ITEM_DIR/media.sh"
+# source "$ITEM_DIR/media.sh"
 
 sketchybar --hotload on
 

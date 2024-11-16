@@ -24,6 +24,7 @@ DATE=(
   y_offset=5
   script="$PLUGIN_DIR/date.sh"
   click_script="$PLUGIN_DIR/scripts/open-calendar.sh"
+
 )
 
 

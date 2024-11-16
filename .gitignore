@@ -2,6 +2,7 @@
 .bundle
 .cache
 .config/*
+.sysinfo
 !.config/aerospace
 !.config/raycast
 !.config/sketchybar
