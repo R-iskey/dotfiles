@@ -12,5 +12,5 @@ brew install --cask wezterm aerospace aldente font-meslo-lg-nerd-font font-hack-
 ```
 
 ```bash
-`brew install git fzf fd bat nvm nvim zoxide zsh zsh-autosuggestions zsh-syntax-highlighting eza heroku powerlevel10k ifstat docker
+brew install git fzf fd bat nvm nvim zoxide zsh zsh-autosuggestions zsh-syntax-highlighting eza heroku powerlevel10k ifstat docker
 ```
