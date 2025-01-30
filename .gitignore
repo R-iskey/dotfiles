@@ -29,6 +29,8 @@
 .yarn
 .yarnrc
 .zsh_sessions
+.cursor
+neo-dev
 
 Applications
 Desktop

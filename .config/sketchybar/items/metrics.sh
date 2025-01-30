@@ -86,21 +86,23 @@ sketchybar --add item spacer_metrics right \
   --add item memory right \
   --add item cpu_label right \
   --add item cpu right \
-  --add item network_up right \
-  --add item network_down right \
   --set memory "${MEMORY[@]}" \
   --set cpu "${CPU[@]}" \
   --set disk "${DISK[@]}" \
   --set cpu_label "${CPU_LABEL[@]}" \
   --set memory_label "${MEMORY_LABEL[@]}" \
   --set disk_label "${DISK_LABEL[@]}" \
-  --set network_up "${NETWORK_UP[@]}" \
-  --set network_down "${NETWORK_DOWN[@]}" \
   --set spacer_metrics background.drawing=off \
   width=10
+  # --add item network_up right \
+  # --add item network_down right \
+
+  # --set network_up "${NETWORK_UP[@]}" \
+  # --set network_down "${NETWORK_DOWN[@]}" \
+
 
 # Create the bracket with metrics items
-sketchybar --add bracket metrics memory cpu disk network_up network_down \
+sketchybar --add bracket metrics memory cpu disk \
     --set metrics background.color=$BG_PRI_COLR_BLUR_OVERLAY \
     background.corner_radius=5 \
     background.height=25 \
